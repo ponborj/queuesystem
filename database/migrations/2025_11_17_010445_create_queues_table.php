@@ -21,7 +21,7 @@ return new class extends Migration {
             $table->integer('queue_total_digits')->default(3);
             $table->string('queue_colors', 255)->nullable();
             $table->string('hash_code', 64)->unique();
-            $table->enum('status', ['active', 'inactive', 'done'])->default(''); // active/inactive/   done (não emite mais senhas))
+            $table->enum('status', ['active', 'inactive', 'done'])->default('active'); // active/inactive/   done (não emite mais senhas))
             $table->dateTime('created_at')->useCurrent();
             $table->dateTime('updated_at')->useCurrent()->useCurrentOnUpdate();
             $table->dateTime('deleted_at')->useCurrent()->nullable()->default(null);

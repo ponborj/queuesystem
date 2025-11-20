@@ -23,7 +23,7 @@ return new class extends Migration {
             $table->dateTime('blocked_until')->nullable()->default(null); // bloqueado até
             $table->dateTime('created_at')->useCurrent();
             $table->dateTime('updated_at')->useCurrent()->useCurrentOnUpdate();
-            $table->dateTime('deleted_at')->useCurrent()->nullable()->default(null);
+            $table->dateTime('deleted_at')->nullable()->default(null);
         });
     }
 

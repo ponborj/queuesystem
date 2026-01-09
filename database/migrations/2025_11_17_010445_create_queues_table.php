@@ -24,7 +24,7 @@ return new class extends Migration {
             $table->enum('status', ['active', 'inactive', 'done'])->default('active'); // active/inactive/   done (não emite mais senhas))
             $table->dateTime('created_at')->useCurrent();
             $table->dateTime('updated_at')->useCurrent()->useCurrentOnUpdate();
-            $table->dateTime('deleted_at')->useCurrent()->nullable()->default(null);
+            $table->dateTime('deleted_at')->nullable()->default(null);
         });
     }
 

@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Str;
+use Illuminate\Support\Str;
 
 class QueueSeeder extends Seeder
 {
@@ -20,7 +20,7 @@ class QueueSeeder extends Seeder
                 'id' => 1,
                 'id_company' => 1,
                 'name' => 'Fila número 1',
-                'description'=> 'Fila para o Atendimento Geral',
+                'description' => 'Fila para o Atendimento Geral',
                 'service_name' => 'Atendimento Geral',
                 'service_desk' => 'Balcão',
                 'queue_prefix' => 'A',
@@ -33,15 +33,15 @@ class QueueSeeder extends Seeder
                 ]),
                 'hash_code' => Str::random(64),
                 'status' => 'active',
-                'created_at'=> now(),
-                'updated_at'=> now(),
-                'deleted_at'=> null,
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
             ],
             [
                 'id' => 2,
                 'id_company' => 1,
                 'name' => 'Fila número 2',
-                'description'=> 'Fila para a Consulta Familiar',
+                'description' => 'Fila para a Consulta Familiar',
                 'service_name' => 'Consulta Familiar',
                 'service_desk' => 'Balcão 2',
                 'queue_prefix' => 'B',
@@ -54,15 +54,15 @@ class QueueSeeder extends Seeder
                 ]),
                 'hash_code' => Str::random(64),
                 'status' => 'active',
-                'created_at'=> now(),
-                'updated_at'=> now(),
-                'deleted_at'=> null,
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
             ],
             [
                 'id' => 3,
                 'id_company' => 2,
                 'name' => 'Fila número 3',
-                'description'=> 'Fila para a Consulta de Rastreio',
+                'description' => 'Fila para a Consulta de Rastreio',
                 'service_name' => 'Consulta de Rastreio',
                 'service_desk' => 'Balcão 3',
                 'queue_prefix' => 'C',
@@ -75,9 +75,9 @@ class QueueSeeder extends Seeder
                 ]),
                 'hash_code' => Str::random(64),
                 'status' => 'active',
-                'created_at'=> now(),
-                'updated_at'=> now(),
-                'deleted_at'=> null,
+                'created_at' => now(),
+                'updated_at' => now(),
+                'deleted_at' => null,
             ],
         ];
 

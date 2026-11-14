@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->integer('id_queue')->index();
             $table->integer('queue_ticket_number')->nullable();
             $table->dateTime('queue_ticket_created_at')->useCurrent(); // quando a senha foi gerada
-            $table->dateTime('queue_ticket_called_at')->useCurrent(); // quando a senha foi chamada 
+            $table->dateTime('queue_ticket_called_at')->nullable()->default(null); // quando a senha foi chamada 
             $table->enum('queue_ticket_status', ['waiting', 'called', 'not_attended', 'dismissed'])->default('waiting'); // waiting/called/not_attended/   dismissed(cancelada)
             $table->string('queue_ticket_called_by', 50)->nullable();
             $table->dateTime('created_at')->useCurrent();

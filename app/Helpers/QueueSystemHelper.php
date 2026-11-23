@@ -1,10 +1,21 @@
 <?php
 
-if (!function_exists('showValidationErrors')) {
-    function showValidationErrors($fieldName, $validationErrors)
+if (!function_exists('showValidationError')) {
+    function showValidationError($fieldName, $validationErrors)
     {
         if ($validationErrors->has($fieldName)) {
             return '<div class="text-sm italic text-red-500">' . $validationErrors->first($fieldName) . '</div>';
+        } else {
+            return '';
+        }
+    }
+}
+
+if (!function_exists('showServerError')) {
+    function showServerError($fieldName, $validationErrors)
+    {
+        if (session()->has('server_error')) {
+            return '<div class="text-sm italic text-red-500">' . session()->get('server_error') . '</div>';
         } else {
             return '';
         }

@@ -14,4 +14,8 @@ class Queue extends Model
     {
         return $this->belongsTo(Company::class, 'id_company');
     }
+
+    public function tickets() {
+        return $this->hasMany(QueueTicket::class, 'id_queue');
+    }
 }

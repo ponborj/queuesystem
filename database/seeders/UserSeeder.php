@@ -27,21 +27,21 @@ class UserSeeder extends Seeder
         $users = [
             [
                 'email' => 'sysadmin@email.com',
-                'password' => bcrypt('123'),
+                'password' => bcrypt('Queue123@'),
                 'id_company' => 0,
                 'role' => 'sys-admin',
                 'active' => true
             ],
             [
                 'email' => 'admincompany1@email.com',
-                'password' => bcrypt('123'),
+                'password' => bcrypt('Queue123@'),
                 'id_company' => 0,
                 'role' => 'client-admin',
                 'active' => true
             ],
             [
                 'email' => 'admincompany2@email.com',
-                'password' => bcrypt('123'),
+                'password' => bcrypt('Queue123@'),
                 'id_company' => 0,
                 'role' => 'client-admin',
                 'active' => true
